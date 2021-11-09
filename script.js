@@ -22,27 +22,32 @@ let numberFive = {
 console.log(numberFive);
 
 
-document.getElementById('box').innerHTML = '';
-function askNumberAs(){
-  let askNumber = prompt('inserisci uno dei numeri che hai visto prima');
 
-  // if(askNumber === getRandomNumb()){
-  //   document.querySelector('.container').innerHTML = `
-  //   Hai indovinato 
-  //   `;
-  // } 
+
+function askNumberAs(){
+  let askNumber;
+  
+  for(let i = 0; i < 5; i++ ){
+    askNumber = prompt('inserisci uno dei numeri che hai visto prima');
+
+    if(askNumber !== getRandomNumb()){
+        document.querySelector('.container').innerHTML = `
+        Hai indovinato ${askNumber} numeri
+        `;
+    }
+  }
 
 }
-
-setTimeout(function(){
-  askNumberAs();
-}, 5000);
-
-writeIn();
-getRandomNumb(numberFive);
-
-
-function writeIn(){
+  
+  setTimeout(function(){
+    askNumberAs();
+  }, 2000);
+  
+  writeIn();
+  getRandomNumb(numberFive);
+  
+  
+  function writeIn(){
   const {number1, number2, number3, number4, number5} = numberFive;
 
   document.getElementById('box').innerHTML = `
