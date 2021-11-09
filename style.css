@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background-color: rgb(81, 179, 56);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#box {
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  margin-top: 32px;
+  border: dashed 2px darkgreen;
+}
