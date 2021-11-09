@@ -18,8 +18,9 @@ body {
 }
 
 #box {
+  display: flex;
+  justify-content: center;
   width: 400px;
-  height: 100px;
   background-color: white;
   margin-top: 32px;
   border: dashed 2px darkgreen;
