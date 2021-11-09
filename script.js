@@ -12,46 +12,48 @@
 
 let getRandomNumb = () => Math.floor(Math.random() * 99);
 
-let numberFive = {
-  number1: getRandomNumb(),
-  number2: getRandomNumb(),
-  number3: getRandomNumb(),
-  number4: getRandomNumb(),
-  number5: getRandomNumb(),
+writeIn();
+
+function makeArrFive(){
+
+  let numberFive = [];
+
+  for(let i = 0; i < 5; i++){
+    numberFive.push(getRandomNumb());
+  }
+
+  return numberFive;
+
 }
-console.log(numberFive);
 
-
-
+console.log(makeArrFive());
 
 function askNumberAs(){
   let askNumber;
-  
-  for(let i = 0; i < 5; i++ ){
-    askNumber = prompt('inserisci uno dei numeri che hai visto prima');
 
-    if(askNumber !== getRandomNumb()){
-        document.querySelector('.container').innerHTML = `
-        Hai indovinato ${askNumber} numeri
-        `;
-    }
+  for(let i = 0; i < 5; i++ ){
+    askNumber;//prompt('inserisci uno dei numeri che hai visto prima');
+
+    // if(askNumber !== numb){
+      
+    //   document.querySelector('.container').innerHTML = `
+    //   Hai indovinato ${numeri} numeri
+    //   `;
+    // }
   }
 
 }
   
-  setTimeout(function(){
-    askNumberAs();
-  }, 2000);
-  
-  writeIn();
-  getRandomNumb(numberFive);
-  
-  
-  function writeIn(){
-  const {number1, number2, number3, number4, number5} = numberFive;
+setTimeout(function(){
+  document.getElementById('box').innerHTML = '';
+  askNumberAs();
+
+}, 2000);
+
+function writeIn(){
 
   document.getElementById('box').innerHTML = `
-  <div style="font-size:50px"> ${number1}, ${number2}, ${number3}, ${number4}, ${number5} </div>
+  <div style="font-size:50px">${makeArrFive()} </div>
   `;
 }
 
