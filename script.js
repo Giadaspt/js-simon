@@ -22,6 +22,7 @@ let numberFive = {
 console.log(numberFive);
 
 
+document.getElementById('box').innerHTML = '';
 function askNumberAs(){
   let askNumber = prompt('inserisci uno dei numeri che hai visto prima');
 
