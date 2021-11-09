@@ -34,13 +34,18 @@ function askNumberAs(){
   
   
   for(let i = 0; i < arr.length; i++ ){
-    if (arr[i]){
-    print.innerHTML = `hai indovinato ${arr[i] !== askNumber}`;
-    }
     askNumber = prompt('inserisci uno dei numeri che hai visto prima');
     console.log(arr[i]);
     console.log(askNumber);
 
+    let count = 0; 
+
+    if (askNumber.includes(arr[i])){
+      count++;
+      print.innerHTML = 'Hai indovinato tutti i numeri';
+    } else {
+      print.innerHTML = 'Non hai indovinato';
+    }
     
   }
 
