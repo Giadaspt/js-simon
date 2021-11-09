@@ -12,6 +12,8 @@
 
 let getRandomNumb = () => Math.floor(Math.random() * 99);
 
+let arr = makeArrFive();
+
 writeIn();
 
 function makeArrFive(){
@@ -23,23 +25,23 @@ function makeArrFive(){
   }
 
   return numberFive;
-
 }
-
-console.log(makeArrFive());
 
 function askNumberAs(){
   let askNumber;
+  let print = document.querySelector('.container');
+  console.log(arr);
+  
+  
+  for(let i = 0; i < arr.length; i++ ){
+    if (arr[i]){
+    print.innerHTML = `hai indovinato ${arr[i] !== askNumber}`;
+    }
+    askNumber = prompt('inserisci uno dei numeri che hai visto prima');
+    console.log(arr[i]);
+    console.log(askNumber);
 
-  for(let i = 0; i < 5; i++ ){
-    askNumber;//prompt('inserisci uno dei numeri che hai visto prima');
-
-    // if(askNumber !== numb){
-      
-    //   document.querySelector('.container').innerHTML = `
-    //   Hai indovinato ${numeri} numeri
-    //   `;
-    // }
+    
   }
 
 }
@@ -53,7 +55,7 @@ setTimeout(function(){
 function writeIn(){
 
   document.getElementById('box').innerHTML = `
-  <div style="font-size:50px">${makeArrFive()} </div>
+  <div style="font-size:50px">${arr} </div>
   `;
 }
 
