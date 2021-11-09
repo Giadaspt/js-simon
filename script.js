@@ -21,11 +21,27 @@ let numberFive = {
 }
 console.log(numberFive);
 
-getRandomNumb(numberFive);
+
+function askNumberAs(){
+  let askNumber = prompt('inserisci uno dei numeri che hai visto prima');
+
+  // if(askNumber === getRandomNumb()){
+  //   document.querySelector('.container').innerHTML = `
+  //   Hai indovinato 
+  //   `;
+  // } 
+
+}
+
+setTimeout(function(){
+  askNumberAs();
+}, 5000);
+
 writeIn();
+getRandomNumb(numberFive);
+
 
 function writeIn(){
-
   const {number1, number2, number3, number4, number5} = numberFive;
 
   document.getElementById('box').innerHTML = `
