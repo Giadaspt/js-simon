@@ -6,15 +6,11 @@
 4. se il valore dei prompt è == al numero random hai indovinato tot altrimenti nessuno
 */
 
+// function getRandomNumb(){
+//  return Math.floor(Math.random() * 99);
+// }
 
-
-//let getRandomNumb = () => Math.floor(Math.random());
-
-function getRandomNumb(){
-
-  return Math.floor(Math.random() * 99);
-}
-console.log(getRandomNumb());
+let getRandomNumb = () => Math.floor(Math.random() * 99);
 
 let numberFive = {
   number1: getRandomNumb(),
@@ -24,17 +20,9 @@ let numberFive = {
   number5: getRandomNumb(),
 }
 console.log(numberFive);
-// console.log(numberFive.number1);
-// console.log(numberFive.number2);
-// console.log(numberFive.number3);
-// console.log(numberFive.number4);
-// console.log(numberFive.number5);
 
 getRandomNumb(numberFive);
-
-console.log(getRandomNumb(numberFive));
-
-writeIn(); 
+writeIn();
 
 function writeIn(){
 
