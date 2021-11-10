@@ -55,7 +55,7 @@ setTimeout(function(){
   document.getElementById('box').innerHTML = '';
   askNumberAs();
 
-}, 2000);
+}, 30000);
 
 function writeIn(){
 
